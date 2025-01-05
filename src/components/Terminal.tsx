@@ -71,5 +71,10 @@ const Terminal = () => {
     </div>
   );
 };
-
+<iframe
+    src="https://www.chatbase.co/chatbot-iframe/4G7D_AG2jyQJAQNtagDdR"
+    width="100%"
+    style="height: 100%; min-height: 700px"
+    frameborder="0"
+></iframe>
 export default Terminal;
