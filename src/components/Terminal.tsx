@@ -12,7 +12,7 @@ const Terminal = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   // Replace with your Chatbase API key
-  const CHATBASE_API_KEY = 'https://www.chatbase.co/chatbot-iframe/4G7D_AG2jyQJAQNtagDdR';
+  const CHATBASE_API_KEY = '4G7D_AG2jyQJAQNtagDdR';
 
   const handleSendMessage = async (content: string) => {
     try {
@@ -71,10 +71,5 @@ const Terminal = () => {
     </div>
   );
 };
-<iframe
-    src="https://www.chatbase.co/chatbot-iframe/4G7D_AG2jyQJAQNtagDdR"
-    width="100%"
-    style="height: 100%; min-height: 700px"
-    frameborder="0"
-></iframe>
+
 export default Terminal;
