@@ -12,7 +12,7 @@ const Terminal = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   // Replace with your Chatbase API key
-  const CHATBASE_API_KEY = '4G7D_AG2jyQJAQNtagDdR';
+  const CHATBASE_API_KEY = '1mcqex66z29dzlmwzjq6vxl96tfnx29m';
 
   const handleSendMessage = async (content: string) => {
     try {
