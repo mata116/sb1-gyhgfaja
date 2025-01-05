@@ -8,7 +8,7 @@ export const sendMessage = async (message: string, apiKey: string) => {
       messages: [{ role: 'user', content: message }],
     }, {
       headers: {
-        'Authorization': `licn5hvruan1make10xe7ists58dchb6`,
+        'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
     });
