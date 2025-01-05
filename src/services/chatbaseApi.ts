@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const CHATBASE_API_URL = 'https://api.chatbase.co/v1/chat';
+const CHATBASE_API_URL = 'https://www.chatbase.co/chatbot-iframe/4G7D_AG2jyQJAQNtagDdR';
 
 export const sendMessage = async (message: string, apiKey: string) => {
   try {
