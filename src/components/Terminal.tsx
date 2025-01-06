@@ -3,7 +3,6 @@ import { X } from 'lucide-react';
 import { useAppState } from '../hooks/useAppState';
 import ChatMessage from './chat/ChatMessage';
 import ChatInput from './chat/ChatInput';
-import { sendMessage } from '../services/chatbaseApi';
 import { Message } from '../types/chat';
 
 const Terminal = () => {
@@ -11,39 +10,29 @@ const Terminal = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Replace with your Chatbase API key
-  const CHATBASE_API_KEY = 'licn5hvruan1make10xe7ists58dchb6';
-
   const handleSendMessage = async (content: string) => {
-    try {
-      setIsLoading(true);
-      
-      // Add user message
-      const userMessage: Message = {
-        id: Date.now().toString(),
-        content,
-        role: 'user',
-        timestamp: new Date(),
-      };
-      setMessages(prev => [...prev, userMessage]);
+    setIsLoading(true);
 
-      // Get response from Chatbase
-      const response = await sendMessage(content, CHATBASE_API_KEY);
+    // Add user message
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      content,
+      role: 'user',
+      timestamp: new Date(),
+    };
+    setMessages((prev) => [...prev, userMessage]);
 
-      // Add assistant message
+    // Simulate a delay for "response"
+    setTimeout(() => {
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: response,
+        content: 'Due to high demand, please wait 3-4 minutes before receiving a response.',
         role: 'assistant',
         timestamp: new Date(),
       };
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error('Error sending message:', error);
-      // Handle error appropriately
-    } finally {
+      setMessages((prev) => [...prev, assistantMessage]);
       setIsLoading(false);
-    }
+    }, 1500); // Simulate a 1.5 second delay
   };
 
   return (
