@@ -17,7 +17,7 @@ const Sidebar = () => {
           Start Analysis
         </button>
         <a
-          href="https://twitter.com"
+          href="https://x.com/memeanalyzerv1"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 p-3 rounded font-vt323 flex items-center gap-2 transition-colors"
@@ -26,7 +26,7 @@ const Sidebar = () => {
           Twitter
         </a>
         <a
-          href="https://telegram.org"
+          href="https://t.me/MEMEANALYZER1"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full bg-blue-400/20 hover:bg-blue-400/30 text-blue-300 p-3 rounded font-vt323 flex items-center gap-2 transition-colors"
